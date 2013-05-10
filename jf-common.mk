@@ -14,6 +14,12 @@
 # limitations under the License.
 #
 
+PRODUCT_COPY_FILES += \
+    device/samsung/jf-common/libsec_km.so:recovery/root/sbin/libsec_km.so \
+    device/samsung/jf-common/libsec_ecryptfs.so:recovery/root/sbin/libsec_ecryptfs.so \
+    device/samsung/jf-common/libkeyutils.so:recovery/root/sbin/libkeyutils.so \
+    device/samsung/jf-common/kernel:kernel
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 ## (2) Also get non-open-source specific aspects if available
