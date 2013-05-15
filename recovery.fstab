@@ -1,12 +1,12 @@
-/boot       emmc        /dev/block/mmcblk0p20
-/system     ext4        /dev/block/mmcblk0p16
-/data       ext4        /dev/block/mmcblk0p29 length=-16384
-/cache      ext4        /dev/block/mmcblk0p18
-/recovery   emmc        /dev/block/mmcblk0p21
-/efs        ext4        /dev/block/mmcblk0p10                            flags=display="EFS";backup=1
-/preload    ext4        /dev/block/mmcblk0p27
-/modem      emmc        /dev/block/mmcblk0p2
-#/sdcard       datamedia   /dev/null
-/external_sd     vfat       /dev/block/mmcblk1p1    /dev/block/mmcblk1   flags=display="Micro SDcard";storage;wipeingui;removable
-/usb-otg         vfat       /dev/block/sda1         /dev/block/sda       flags=display="USB-OTG";storage;wipeingui;removable
+# mount point  fstype  	device
+/efs			ext4		/dev/block/platform/msm_sdcc.1/by-name/efs
+/boot			emmc		/dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery		emmc		/dev/block/platform/msm_sdcc.1/by-name/recovery
+/cache			ext4		/dev/block/platform/msm_sdcc.1/by-name/cache
+/system			ext4		/dev/block/platform/msm_sdcc.1/by-name/system 
+/data			ext4		/dev/block/platform/msm_sdcc.1/by-name/userdata	length=-16384
+#/preload		ext4		/dev/block/platform/msm_sdcc.1/by-name/hidden
+/modem			emmc		/dev/block/platform/msm_sdcc.1/by-name/apnhlos
 
+/sdcard			datamedia	/dev/null
+/external_sd		auto		/dev/block/mmcblk1p1
